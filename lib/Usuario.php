@@ -7,7 +7,7 @@ Class Usuario{
     var $clave;
 
 
-    function VerificaUsuario(){
+    function VerificaUsuarioClave(){
         $oConn= new Conexion();
         
         
@@ -17,12 +17,14 @@ Class Usuario{
             return false;
         
         $clavemd5=  md5($this->clave);
-        $sql="SELECT * FROM acceso WHERE nomusuario='$this->nombre' and pwdusuario='$clavemd5'";
+        
+        
+        $sql="SELECT * FROM acceso WHERE nomusuario='$this->nombre' ";
         
         echo $sql;
         $resultado=$db->query($sql);
         
-        if($resultado->num_rows>=1|| $resultado)
+        if($resultado->num_rows>=1)
             return TRUE;
         else
             return FALSE;        
