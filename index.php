@@ -20,16 +20,18 @@ $_SESSION["saludo"]="Hola Mundo";
         
         <a href="revision.php"> Revisi&oacute;n sesi&oacute;n</a>
         
-            <?php if (!isset($_SESSION['USR'])); { ?>
+            <?php if (!isset($_SESSION['USR'])) { ?>
         
-            <form method="post" action="revision.php">
+        <form method="post" action="revision.php">
             <div><label>Usuario</label><input type="text" name="nombre">
             <div><label>Clave</label><input type="password" name="clave"></br> 
             <input type="submit" name="Acceder">
         </form>
-        </br>
+        
+        
         <?php } ?>
-        <?php 
+        <?php
+            echo '<br>';
             echo md5('#holamundo&');
             echo '<br>';
             echo md5('holamundo');
