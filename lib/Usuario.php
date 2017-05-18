@@ -12,7 +12,7 @@ Class Usuario{
         
         
         if($oConn->conectar())
-            $db=$oConn->objcon;
+            $db=$oConn->objconn;
         else
             return false;
         
