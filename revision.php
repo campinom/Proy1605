@@ -18,6 +18,12 @@ if($oUsr->VerificaUsuarioClave())
 header('Location:http://localhost:8081/proy1605/')
 /*session_start();
 var_dump($_SESSION);*/
+/*
+Yo tomo licor, yo tomo cerveza
+ * y me gustan las chicas
+ * la cumbia me diviert
+ * y mesita
+  */
 
 
 
